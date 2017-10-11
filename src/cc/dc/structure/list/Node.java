@@ -1,4 +1,4 @@
-package cc.dc.structure;
+package cc.dc.structure.list;
 
 public class Node {
 
