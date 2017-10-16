@@ -13,6 +13,7 @@ public class TestDemo {
         tree.insert(9);
         tree.insert(10);
 
+
         tree.iterateFirstOrder(tree.root);
         System.out.println();
         tree.iterateMiddleOrder(tree.root);
