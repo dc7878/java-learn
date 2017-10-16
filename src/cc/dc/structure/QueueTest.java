@@ -1,7 +1,6 @@
 package cc.dc.structure;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
+import java.util.*;
 
 public class QueueTest {
     Queue<Integer> queue1 = new ArrayDeque<>();
