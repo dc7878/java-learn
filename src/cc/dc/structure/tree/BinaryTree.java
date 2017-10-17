@@ -52,13 +52,22 @@ public class BinaryTree {
         iterateFirstOrder(node.getRightNode());
     }
 
-    public void iterateMiddleOrder(BinaryTreeNode node) {
+    public void iterateMediumOrder(BinaryTreeNode node) {
         if (node == null) {
             return;
         }
-        iterateMiddleOrder(node.getLeftNode());
+        iterateMediumOrder(node.getLeftNode());
         operate(node);
-        iterateMiddleOrder(node.getRightNode());
+        iterateMediumOrder(node.getRightNode());
+    }
+
+    public void iterateLastOrder(BinaryTreeNode node) {
+        if (node == null) {
+            return;
+        }
+        iterateLastOrder(node.getLeftNode());
+        iterateLastOrder(node.getRightNode());
+        operate(node);
     }
 
     private void operate(BinaryTreeNode node) {
