@@ -3,11 +3,14 @@ package cc.dc.structure;
 public class TestDemo {
 
     public static void main(String[] args) {
-        LinkList linkList = new LinkList();
-        linkList.add(0, 111);
-        linkList.add(1, 2222);
-        for (int i = 0; i < linkList.size(); i++) {
-            System.out.println(linkList.get(i));
-        }
+        Person head = null;
+        Person current = null;
+        Person person = new Person("dc", 12);
+        head = person;
+        current = head;
+        System.out.println(current.getName());
+        current = new Person("DC", 13);
+        System.out.println(current.getName());
+        System.out.println(head.getName());
     }
 }
