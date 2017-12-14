@@ -1,6 +1,6 @@
 package cc.dc.sort;
 
-public class Test {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] array = {5,2,4,9,3};
         sort(array);
