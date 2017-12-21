@@ -32,6 +32,22 @@ public class AVLTree {
         return balance(node);
     }
 
+    public void remove(int data) {
+        remove(root, data);
+    }
+
+    private AVLTreeNode remove(AVLTreeNode node, int data) {
+        if (node == null) {
+            return null;
+        }
+        if (data > node.data) {
+            return remove(node.right, data);
+        } else if (data < node.data) {
+            return remove(node.left, data);
+        }
+        return node;
+    }
+
     // 再平衡
     private AVLTreeNode balance(AVLTreeNode node) {
         return null;
