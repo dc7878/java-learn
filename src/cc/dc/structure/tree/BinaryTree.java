@@ -43,6 +43,40 @@ public class BinaryTree {
         }
     }
 
+    /**
+     * 获取树的高度
+     */
+    public int getHeight() {
+        return getHeight(root);
+    }
+
+    private int getHeight(BinaryTreeNode node) {
+        if (node == null) {
+            height = 0;
+        } else {
+            int leftH = getHeight(node.getLeftNode());
+            int rightH = getHeight(node.getRightNode());
+            height = leftH > rightH ? leftH : rightH;
+        }
+        return height;
+    }
+
+    /**
+     * 获取节点数量
+     */
+    public int getNodeCount() {
+        return getNodeCount(root);
+    }
+
+    private int getNodeCount(BinaryTreeNode node) {
+        if (node == null) {
+            nodeCount = 0;
+        } else {
+            nodeCount = getNodeCount(node.getLeftNode()) + getNodeCount(node.getRightNode()) + 1;
+        }
+        return nodeCount;
+    }
+
     public void iterateFirstOrder(BinaryTreeNode node) {
         if (node == null) {
             return;
