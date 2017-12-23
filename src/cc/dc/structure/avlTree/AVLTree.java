@@ -12,7 +12,7 @@ public class AVLTree {
         if (node != null) {
             return node.height;
         }
-        return 0;
+        return -1;
     }
 
     public void insert(int data) {
