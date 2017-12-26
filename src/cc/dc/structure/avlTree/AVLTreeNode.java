@@ -14,6 +14,6 @@ public class AVLTreeNode {
         this.data = data;
         this.left = left;
         this.right = right;
-        this.height = 0;
+        this.height = -1;
     }
 }
